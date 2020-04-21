@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/windows_xp_bliss-1920x1080.jpg" type="Texture" id=1]
+[ext_resource path="res://audio/after war.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/main menu.gd" type="Script" id=3]
+[ext_resource path="res://animeace.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 128
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="quitbutton" type="ToolButton" parent="."]
+margin_left = 736.0
+margin_top = 702.0
+margin_right = 1131.0
+margin_bottom = 852.0
+custom_fonts/font = SubResource( 1 )
+text = "QUIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playbutton" type="ToolButton" parent="."]
+margin_left = 736.0
+margin_top = 261.0
+margin_right = 1122.0
+margin_bottom = 411.0
+custom_fonts/font = SubResource( 2 )
+text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="quitbutton" to="." method="_on_quitbutton_pressed"]
+[connection signal="pressed" from="playbutton" to="." method="_on_playbutton_pressed"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/after war.wav-9caa9b9b565388e1e95f104e8bf37503.sample"
+
+[deps]
+
+source_file="res://audio/after war.wav"
+dest_files=[ "res://.import/after war.wav-9caa9b9b565388e1e95f104e8bf37503.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

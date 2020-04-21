@@ -1,0 +1,516 @@
+[gd_scene load_steps=77 format=2]
+
+[ext_resource path="res://animeace.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/health bar/progress bar, peripheral (prototype).png" type="Texture" id=2]
+[ext_resource path="res://src/player/player animations/spr_ArcherDash_strip_NoBkg.png" type="Texture" id=3]
+[ext_resource path="res://src/player/player animations/spr_ArcherIdle_strip_NoBkg.png" type="Texture" id=4]
+[ext_resource path="res://src/player/player animations/spr_ArcherRun_strip_NoBkg.png" type="Texture" id=5]
+[ext_resource path="res://src/pause.gd" type="Script" id=6]
+[ext_resource path="res://src/player/player controller.gd" type="Script" id=7]
+[ext_resource path="res://src/player/player animations/spr_ArcherMelee_strip_NoBkg.png" type="Texture" id=8]
+[ext_resource path="res://tilset.tres" type="TileSet" id=9]
+[ext_resource path="res://src/health bar/progress bar, actual.png" type="Texture" id=10]
+[ext_resource path="res://src/Healthbar.gd" type="Script" id=11]
+[ext_resource path="res://tileset.png" type="Texture" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.74898, 15.6264 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1024, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1152, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1280, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1408, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1536, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1664, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1792, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1920, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2048, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2176, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2304, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2432, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2560, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2688, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2816, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2944, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 3072, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 3200, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 3328, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 3456, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1024, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1152, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1280, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1408, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1536, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1664, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=60]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 14.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
+"loop": true,
+"name": "attackmelee",
+"speed": 14.0
+}, {
+"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
+"loop": true,
+"name": "run",
+"speed": 14.0
+}, {
+"frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
+"loop": true,
+"name": "dash",
+"speed": 14.0
+} ]
+
+[sub_resource type="CircleShape2D" id=61]
+radius = 4.0
+
+[sub_resource type="DynamicFont" id=62]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=63]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="TileSet" id=64]
+0/name = "tileset.png 0"
+0/texture = ExtResource( 12 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 168, 176, 120 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="gamescene" type="Node2D"]
+
+[node name="player" type="KinematicBody2D" parent="."]
+z_index = 5
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 17.142, -24.695 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 20, -20 )
+frames = SubResource( 60 )
+animation = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+offset = Vector2( 0, -100 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="player"]
+position = Vector2( 16, -12 )
+shape = SubResource( 61 )
+
+[node name="Control" type="Control" parent="player"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthActual" type="TextureProgress" parent="player/Control"]
+margin_left = -464.0
+margin_top = -356.0
+margin_right = -179.0
+margin_bottom = -296.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthMissing" type="TextureProgress" parent="player/Control"]
+margin_left = 56.0
+margin_top = -204.0
+margin_right = 96.0
+margin_bottom = -164.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="player/Control"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="pause" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+anchor_left = -0.25
+anchor_top = -0.248
+anchor_right = -0.25
+anchor_bottom = -0.248
+margin_left = 480.0
+margin_top = 267.84
+margin_right = 1440.0
+margin_bottom = 807.84
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/pause"]
+anchor_left = 0.0125
+anchor_top = 0.0296296
+anchor_right = 2.01667
+anchor_bottom = 2.02963
+margin_left = -12.0
+margin_top = -16.0
+margin_right = -12.0
+margin_bottom = -16.0
+color = Color( 0, 0, 0, 0.352941 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/pause"]
+margin_left = 680.0
+margin_top = 240.0
+margin_right = 1221.0
+margin_bottom = 533.0
+custom_fonts/font = SubResource( 62 )
+text = "		GAME IS PAUSED
+
+
+Press Escape to unpause"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" type="Button" parent="CanvasLayer/pause"]
+pause_mode = 2
+margin_left = 624.0
+margin_top = 528.0
+margin_right = 864.0
+margin_bottom = 640.0
+custom_fonts/font = SubResource( 63 )
+text = "Quit game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="returntomenu" type="Button" parent="CanvasLayer/pause"]
+margin_left = 1008.0
+margin_top = 528.0
+margin_right = 1248.0
+margin_bottom = 640.0
+custom_fonts/font = SubResource( 63 )
+text = "Return to menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="terrain" type="TileMap" parent="."]
+z_index = -1
+tile_set = ExtResource( 9 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1114147, 10, 0, -1114117, 10, 0, -1179623, 10, 0, -1179593, 10, 0, -524279, 1, 0, -458722, 4, 0, -393213, 7, 0, -393190, 2, 0, -393189, 2, 0, -393186, 7, 0, -327657, 2, 1, -327654, 7, 0, -262144, 7, 0, -262138, 7, 0, -262122, 7, 0, -65535, 3, 0, -65534, 3, 1, -65533, 2, 0, -65532, 2, 0, -65531, 3, 2, -65529, 2, 1, -65528, 2, 2, -65527, 2, 2, -65526, 2, 2, -65525, 3, 2, -65520, 3, 0, -65519, 3, 1, -65516, 2, 0, -65515, 2, 0, -65514, 2, 0, -65513, 2, 1, -65512, 2, 0, -65511, 2, 0, -65510, 2, 0, -65508, 3, 0, -65507, 3, 1, 0, 8, 0, 2, 8, 0, 4, 8, 0, 6, 8, 0, 8, 8, 0, 10, 8, 0, 12, 8, 0, 14, 8, 0, 16, 8, 0, 18, 7, 0, 20, 7, 0, 22, 7, 0, 24, 7, 0, 26, 7, 0, 28, 7, 0, 30, 7, 0, 131070, 5, 0 )
+
+[node name="background" type="Node2D" parent="."]
+position = Vector2( -220, -156 )
+z_index = -99
+
+[node name="ColorRect" type="ColorRect" parent="background"]
+margin_left = -260.0
+margin_top = -212.0
+margin_right = 700.0
+margin_bottom = 324.0
+color = Color( 0.00392157, 0.32549, 0.737255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="trees" type="TileMap" parent="."]
+z_index = -10
+tile_set = SubResource( 64 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -983022, 0, 0 )
+[connection signal="pressed" from="CanvasLayer/pause/quit" to="CanvasLayer/pause" method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/pause/returntomenu" to="CanvasLayer/pause" method="_on_returntomenu_pressed"]
