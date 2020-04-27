@@ -6,6 +6,7 @@ signal health_updated(health)
 signal killed()
 
 var maxhealth = 100
+onready var invulnerabilitytime = $invulnerabilitytime
 onready var health = maxhealth
 var speed = 250
 var x = 0
@@ -73,7 +74,9 @@ func kill() :
 	pass
 
 func damage(amount):
-	set_health(health - amount)
+	if invulnerabilitytime.is_stopped() :
+		invulnerabilitytime.start()
+		set_health(health - amount)
 
 func set_health(value) :
 	var pre_health = health
@@ -87,5 +90,5 @@ func set_health(value) :
 
 
 
-		
+
 

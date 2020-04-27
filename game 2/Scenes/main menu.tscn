@@ -44,7 +44,6 @@ __meta__ = {
 }
 
 [node name="main menu" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -98,6 +97,7 @@ __meta__ = {
 }
 
 [node name="options" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
