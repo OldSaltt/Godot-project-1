@@ -380,6 +380,20 @@ offset = Vector2( 0, -100 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 
+[node name="background" type="Node2D" parent="player/Camera2D"]
+position = Vector2( -220, -156 )
+z_index = -99
+
+[node name="ColorRect" type="ColorRect" parent="player/Camera2D/background"]
+margin_left = -260.0
+margin_top = -212.0
+margin_right = 700.0
+margin_bottom = 324.0
+color = Color( 0.00392157, 0.32549, 0.737255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="player"]
 position = Vector2( 16, -12 )
 shape = SubResource( 61 )
@@ -491,20 +505,6 @@ tile_set = ExtResource( 9 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -1114147, 10, 0, -1114117, 10, 0, -1179623, 10, 0, -1179593, 10, 0, -524279, 1, 0, -458722, 4, 0, -393213, 7, 0, -393190, 2, 0, -393189, 2, 0, -393186, 7, 0, -327657, 2, 1, -327654, 7, 0, -262144, 7, 0, -262138, 7, 0, -262122, 7, 0, -65535, 3, 0, -65534, 3, 1, -65533, 2, 0, -65532, 2, 0, -65531, 3, 2, -65529, 2, 1, -65528, 2, 2, -65527, 2, 2, -65526, 2, 2, -65525, 3, 2, -65520, 3, 0, -65519, 3, 1, -65516, 2, 0, -65515, 2, 0, -65514, 2, 0, -65513, 2, 1, -65512, 2, 0, -65511, 2, 0, -65510, 2, 0, -65508, 3, 0, -65507, 3, 1, 0, 8, 0, 2, 8, 0, 4, 8, 0, 6, 8, 0, 8, 8, 0, 10, 8, 0, 12, 8, 0, 14, 8, 0, 16, 8, 0, 18, 7, 0, 20, 7, 0, 22, 7, 0, 24, 7, 0, 26, 7, 0, 28, 7, 0, 30, 7, 0, 131070, 5, 0 )
-
-[node name="background" type="Node2D" parent="."]
-position = Vector2( -220, -156 )
-z_index = -99
-
-[node name="ColorRect" type="ColorRect" parent="background"]
-margin_left = -260.0
-margin_top = -212.0
-margin_right = 700.0
-margin_bottom = 324.0
-color = Color( 0.00392157, 0.32549, 0.737255, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="trees" type="TileMap" parent="."]
 z_index = -10
